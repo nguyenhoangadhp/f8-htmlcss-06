@@ -28,12 +28,20 @@ body {
     margin: 0 auto;
 }
 
+.container--lg {
+    width: 1330px;
+    max-width: calc(100% - 30px);
+    margin: 0 auto;
+}
+
 a {
     text-decoration: none;
 }
 
 .btn {
-    display: inline-block;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     min-width: 170px;
     height: var(--height);
     line-height: var(--height);
@@ -73,6 +81,7 @@ a {
 }
 
 .pri__desc {
+    display: inline-block;
     color: var(--desc-color);
     font-size: 1.8rem;
     font-weight: 400;
@@ -94,13 +103,16 @@ a {
 }
 
 .header {
-    position: sticky;
-    top: -10px;
-    z-index: 3;
     padding-top: 20px;
     align-items: center;
     justify-content: space-around;
     background: rgba(251, 250, 255, 0.9);
+}
+
+.header--fixed {
+    position: sticky;
+    top: -10px;
+    z-index: 3;
 }
 
 .header-mail {
@@ -162,60 +174,70 @@ a {
 }
 
 .hero-wrap {
-    display: grid;
-    grid-template-columns: auto auto;
-    column-gap: 100px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 30px;
 }
 
 .hero-media {
-    margin-left: 60px;
     position: relative;
+    width: 60%;
 }
 
 .hero-decor__top {
     position: absolute;
     bottom: 0;
-    left: -40%;
+    left: -10%;
+    z-index: 0;
 }
 
 .hero-decor__bottom {
     position: absolute;
     bottom: 0;
-    right: -20%;
+    right: -5%;
+    z-index: 0;
 }
 
 .hero__img {
-    position: relative;
+    position: absolute;
     display: block;
+    bottom: 0;
+    left: 0;
     width: 514px;
     height: 705px;
     object-fit: cover;
-    z-index: 2;
+    z-index: 1;
 }
 
 .hero-content {
+    width: 40%;
     position: relative;
     margin-top: 150px;
+    z-index: 1;
 }
 
 .hero__heading {
+    width: 100%;
     color: var(--heading-color);
-    min-width: 500px;
     font-size: 8rem;
     font-weight: 500;
     line-height: 0.95;
 }
 
 .hero__desc {
-    width: 370px;
+    width: 60%;
     margin-top: 20px;
 }
 
 .hero-action {
+    display: flex;
+    align-items: center;
     margin-top: 50px;
 }
 
 .hero__link {
+    display: inline-block;
     margin-left: 30px;
     padding: 16px 0;
     color: var(--heading-color);
@@ -582,6 +604,7 @@ a {
 
 .feedback-client__img {
     width: 100%;
+    height: auto;
 }
 
 .feedback-client__name {
@@ -598,6 +621,7 @@ a {
     justify-content: center;
     align-items: center;
     gap: 16px;
+    z-index: 1;
 }
 
 .feedback-dot {
@@ -626,15 +650,18 @@ a {
     background: var(--primary-color);
 }
 
-.feedback-decor__left {
+.feedback-decor__left,
+.feedback-decor__right {
     position: absolute;
     bottom: 0;
+    z-index: 0;
+}
+
+.feedback-decor__left {
     left: 0;
 }
 
 .feedback-decor__right {
-    position: absolute;
-    bottom: 0;
     right: 0;
 }
 
@@ -737,4 +764,57 @@ a {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+/* Booking */
+.booking {
+    position: relative;
+    padding: 68px 0;
+    margin-top: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: var(--bg-color);
+}
+
+.booking-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 1;
+}
+
+.booking__heading {
+    margin: 24px 0;
+}
+
+.booking__desc {
+    width: 43%;
+}
+
+.booking__btn {
+    max-width: 170px;
+    display: flex;
+    margin-top: 30px;
+}
+
+.booking-decor--left,
+.booking-decor--center,
+.booking-decor--right {
+    position: absolute;
+    z-index: 0;
+}
+
+.booking-decor--left {
+    left: 0;
+    bottom: 0;
+}
+
+.booking-decor--right {
+    right: 0;
+    top: 0;
 }

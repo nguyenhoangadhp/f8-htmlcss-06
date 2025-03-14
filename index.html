@@ -105,7 +105,7 @@
     </head>
     <body style="height: 8000px">
         <!-- Header -->
-        <header class="header">
+        <header class="header header--fixed">
             <div class="header-mail">
                 <div class="header-mail__icon">
                     <img
@@ -139,7 +139,18 @@
 
         <!-- Hero -->
         <section class="hero">
-            <div class="container hero-wrap">
+            <div class="container--lg hero-wrap">
+                <img
+                    src="./assets/icon/hero-decor.svg"
+                    alt=""
+                    class="hero-decor__top"
+                />
+                <img
+                    src="./assets/icon/hero-decor-02.svg"
+                    alt=""
+                    class="hero-decor__bottom"
+                />
+
                 <!-- Hero media -->
                 <div class="hero-media">
                     <img
@@ -147,19 +158,9 @@
                         alt=""
                         class="hero__img"
                     />
-                    <img
-                        src="./assets/icon/hero-decor.svg"
-                        alt=""
-                        class="hero-decor__top"
-                    />
                 </div>
                 <!-- Hero content -->
                 <div class="hero-content">
-                    <img
-                        src="./assets/icon/hero-decor-02.svg"
-                        alt=""
-                        class="hero-decor__bottom"
-                    />
                     <h1 class="hero__heading">An Interactive Designer</h1>
 
                     <p class="pri__desc hero__desc">
@@ -634,7 +635,7 @@
         </section>
 
         <!-- Questions -->
-        <div class="question">
+        <section class="question">
             <div class="container">
                 <h2 class="pri__heading question__heading">
                     A few questions clients normally ask me
@@ -703,7 +704,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
         <!-- Space working -->
         <section class="spacework">
@@ -754,5 +755,42 @@
                 </div>
             </div>
         </section>
+
+        <!-- Booking -->
+        <div class="container--lg">
+            <section class="booking">
+                <div class="booking-content">
+                    <img
+                        src="./assets/icon/emoji-01.svg"
+                        alt=""
+                        class="booking-emoji"
+                    />
+                    <h2 class="pri__heading booking__heading">
+                        Got a project? Let’s talk
+                    </h2>
+                    <p class="pri__desc booking__desc">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        In urna, non nisl tincidunt ut elementum turpis.
+                    </p>
+                    <a href="#!" class="btn booking__btn">Book a Call</a>
+                </div>
+
+                <img
+                    src="./assets/images/booking-decor-01.svg"
+                    alt=""
+                    class="booking-decor--left"
+                />
+                <img
+                    src="./assets/images/booking-decor-02.svg"
+                    alt=""
+                    class="booking-decor--center"
+                />
+                <img
+                    src="./assets/images/booking-decor-03.svg"
+                    alt=""
+                    class="booking-decor--right"
+                />
+            </section>
+        </div>
     </body>
 </html>
