@@ -103,24 +103,16 @@
         <link rel="stylesheet" href="./assets/css/style.css" />
         <link rel="stylesheet" href="./assets/css/responsive.css" />
     </head>
-    <body style="height: 8000px">
-        <!-- Header -->
-        <header class="header header--fixed">
-            <div class="header-mail">
-                <div class="header-mail__icon">
-                    <img
-                        src="./assets/icon/heart-mail.svg"
-                        alt=""
-                        class="header-mail__img"
-                    />
-                </div>
-                <a href="mailto:hi@arif.interactive" class="header-mail__link"
-                    >hi@arif.interactive</a
-                >
-            </div>
-            <a href="#!" class="logo">
-                <img src="./assets/images/logo.png" alt="" class="logo__img" />
-            </a>
+    <body>
+        <input class="close-menu" id="close-menu" type="checkbox" hidden />
+        <!--Header  Mobile -->
+        <label for="close-menu" class="overlay show-on-mb"></label>
+
+        <div class="nav-mobile show-on-mb">
+            <label for="close-menu">
+                <i class="fa-solid fa-xmark toggle-mobile"></i>
+            </label>
+
             <ul class="nav">
                 <li class="nav-item">
                     <a href="#!" class="nav-item__link">Projects</a>
@@ -135,74 +127,140 @@
                     <a href="#!" class="nav-item__link">Contact</a>
                 </li>
             </ul>
+        </div>
+
+        <!-- Header -->
+        <div class="header-mobile show-on-mb">
+            <a href="#!" class="logo">
+                <img src="./assets/images/logo.png" alt="" class="logo__img" />
+            </a>
+            <div class="header-mobile--right">
+                <div class="header-mail__icon">
+                    <img
+                        src="./assets/icon/heart-mail.svg"
+                        alt=""
+                        class="header-mail__img"
+                    />
+                </div>
+                <label for="close-menu"
+                    ><i class="fa-solid fa-bars header-mobile__menu"></i
+                ></label>
+            </div>
+        </div>
+
+        <header class="header header--fixed hide-on-mb">
+            <div class="container--lg">
+                <div class="header-inner">
+                    <div class="header-mail">
+                        <div class="header-mail__icon">
+                            <img
+                                src="./assets/icon/heart-mail.svg"
+                                alt=""
+                                class="header-mail__img"
+                            />
+                        </div>
+                        <a
+                            href="mailto:hi@arif.interactive"
+                            class="header-mail__link"
+                            >hi@arif.interactive</a
+                        >
+                    </div>
+                    <a href="#!" class="logo">
+                        <img
+                            src="./assets/images/logo.png"
+                            alt=""
+                            class="logo__img"
+                        />
+                    </a>
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a href="#!" class="nav-item__link">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#!" class="nav-item__link">Journey</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#!" class="nav-item__link">Service</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#!" class="nav-item__link">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </header>
 
         <!-- Hero -->
         <section class="hero">
-            <div class="container--lg hero-wrap">
-                <img
-                    src="./assets/icon/hero-decor.svg"
-                    alt=""
-                    class="hero-decor__top"
-                />
-                <img
-                    src="./assets/icon/hero-decor-02.svg"
-                    alt=""
-                    class="hero-decor__bottom"
-                />
-
+            <div class="container--lg">
                 <!-- Hero media -->
-                <div class="hero-media">
+                <div class="hero-inner">
+                    <!-- Hero decor -->
                     <img
-                        src="./assets/images/hero.png"
+                        src="./assets/icon/hero-decor-02.svg"
                         alt=""
-                        class="hero__img"
+                        class="hero-decor__bottom"
                     />
-                </div>
-                <!-- Hero content -->
-                <div class="hero-content">
-                    <h1 class="hero__heading">An Interactive Designer</h1>
 
-                    <p class="pri__desc hero__desc">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        In urna, non nisl tincidunt ut elementum turpis.
-                    </p>
-
-                    <div class="hero-action">
-                        <a href="#!" class="hero-btn">
-                            <button class="btn hero-btn__link">
-                                Book a Call
-                            </button>
-                        </a>
-                        <a href="#!" class="hero__link">My Works</a>
+                    <div class="hero-media">
+                        <img
+                            src="./assets/icon/hero-decor.svg"
+                            alt=""
+                            class="hero-decor__top"
+                        />
+                        <img
+                            src="./assets/images/hero.png"
+                            alt=""
+                            class="hero__img"
+                        />
                     </div>
 
-                    <!-- Hero socials -->
-                    <div class="hero-social">
-                        <p class="second__desc hero-social__title">
-                            Follow me on:
-                        </p>
-                        <ul class="hero-list">
-                            <li class="hero-item">
-                                <a
-                                    href="#!"
-                                    class="hero-item__link fa-brands fa-behance"
-                                ></a>
-                            </li>
-                            <li class="hero-item">
-                                <a
-                                    href="#!"
-                                    class="hero-item__link fa-solid fa-basketball"
-                                ></a>
-                            </li>
+                    <!-- Hero content -->
+                    <div class="hero-content">
+                        <h1 class="hero__heading">An Interactive Designer</h1>
 
-                            <li class="hero-item">
-                                <a
-                                    href="#!"
-                                    class="hero-item__link fa-brands fa-instagram"
-                                ></a>
-                            </li>
-                        </ul>
+                        <p class="hero__desc pri__desc">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit. In urna, non nisl tincidunt ut elementum
+                            turpis.
+                        </p>
+
+                        <div class="hero-action">
+                            <a href="#!" class="hero-btn">
+                                <button class="btn hero-btn__link">
+                                    Book a Call
+                                </button>
+                            </a>
+                            <a href="#!" class="hero__link">My Works</a>
+                        </div>
+
+                        <!-- Hero socials -->
+                        <div class="hero-social">
+                            <p class="second__desc hero-social__title">
+                                Follow me on:
+                            </p>
+                            <ul class="hero-list">
+                                <li class="hero-item">
+                                    <a
+                                        href="#!"
+                                        class="hero-item__link fa-brands fa-behance"
+                                    ></a>
+                                </li>
+                                <li class="hero-item">
+                                    <a
+                                        href="#!"
+                                        class="hero-item__link fa-solid fa-basketball"
+                                    ></a>
+                                </li>
+
+                                <li class="hero-item">
+                                    <a
+                                        href="#!"
+                                        class="hero-item__link fa-brands fa-instagram"
+                                    ></a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -211,323 +269,293 @@
         <!-- Client -->
         <section class="client">
             <div class="container">
-                <!-- Client top -->
-                <div class="client-top">
+                <div class="client-inner">
                     <p class="client__title second__heading">
                         Meet my recent clients
                     </p>
-                    <ul class="client-top__list">
-                        <li class="client-top-item">
-                            <a href="#!" class="client-top-item__link">
+                    <ul class="client-list">
+                        <li class="client-item">
+                            <a href="#!" class="client-item__link">
                                 <img
                                     src="./assets/icon/google.svg"
                                     alt=""
-                                    class="client-top-item__logo"
+                                    class="client-item__logo"
                                 />
-                                <span class="client-top-item__name"
-                                    >Google</span
-                                >
+                                <span class="client-item__name">Google</span>
                             </a>
                         </li>
-                        <li class="client-top-item">
-                            <a href="#!" class="client-top-item__link">
+                        <li class="client-item">
+                            <a href="#!" class="client-item__link">
                                 <img
                                     src="./assets/icon/warner-bros.svg"
                                     alt=""
-                                    class="client-top-item__logo"
+                                    class="client-item__logo"
                                 />
-                                <span class="client-top-item__name"
+                                <span class="client-item__name"
                                     >Warner Bros</span
                                 >
                             </a>
                         </li>
-                        <li class="client-top-item">
-                            <a href="#!" class="client-top-item__link">
+                        <li class="client-item">
+                            <a href="#!" class="client-item__link">
                                 <img
                                     src="./assets/icon/mailchimp.svg"
                                     alt=""
-                                    class="client-top-item__logo"
+                                    class="client-item__logo"
                                 />
-                                <span class="client-top-item__name"
-                                    >Mailchimp</span
-                                >
+                                <span class="client-item__name">Mailchimp</span>
                             </a>
                         </li>
-                        <li class="client-top-item">
-                            <a href="#!" class="client-top-item__link">
+                        <li class="client-item">
+                            <a href="#!" class="client-item__link">
                                 <img
                                     src="./assets/icon/adobe.svg"
                                     alt=""
-                                    class="client-top-item__logo"
+                                    class="client-item__logo"
                                 />
-                                <span class="client-top-item__name">Adobe</span>
+                                <span class="client-item__name">Adobe</span>
                             </a>
                         </li>
-                        <li class="client-top-item">
-                            <a href="#!" class="client-top-item__link">
+                        <li class="client-item">
+                            <a href="#!" class="client-item__link">
                                 <img
                                     src="./assets/icon/upwork.svg"
                                     alt=""
-                                    class="client-top-item__logo"
+                                    class="client-item__logo"
                                 />
-                                <span class="client-top-item__name"
-                                    >Upwork</span
-                                >
+                                <span class="client-item__name">Upwork</span>
                             </a>
                         </li>
-                        <li class="client-top-item">
-                            <a href="#!" class="client-top-item__link">
+                        <li class="client-item">
+                            <a href="#!" class="client-item__link">
                                 <img
                                     src="./assets/icon/creative-cloud.svg"
                                     alt=""
-                                    class="client-top-item__logo"
+                                    class="client-item__logo"
                                 />
-                                <span class="client-top-item__name"
+                                <span class="client-item__name"
                                     >Creative Cloud</span
                                 >
                             </a>
                         </li>
-                        <li class="client-top-item">
-                            <a href="#!" class="client-top-item__link">
+                        <li class="client-item">
+                            <a href="#!" class="client-item__link">
                                 <img
                                     src="./assets/icon/woocommerce.svg"
                                     alt=""
-                                    class="client-top-item__logo"
+                                    class="client-item__logo"
                                 />
-                                <span class="client-top-item__name"
+                                <span class="client-item__name"
                                     >Woocommerce</span
                                 >
                             </a>
                         </li>
-                        <li class="client-top-item">
-                            <a href="#!" class="client-top-item__link">
+                        <li class="client-item">
+                            <a href="#!" class="client-item__link">
                                 <img
                                     src="./assets/icon/canva.svg"
                                     alt=""
-                                    class="client-top-item__logo"
+                                    class="client-item__logo"
                                 />
-                                <span class="client-top-item__name">Canva</span>
+                                <span class="client-item__name">Canva</span>
                             </a>
                         </li>
                     </ul>
                 </div>
+            </div>
+        </section>
 
-                <!-- Client special -->
-                <div class="client-special">
-                    <div class="client-content">
-                        <p class="client__heading pri__heading">Specialities</p>
-                        <p class="client__desc pri__desc">
+        <!-- Special -->
+        <div class="special">
+            <div class="container">
+                <div class="special-inner">
+                    <div class="special-content">
+                        <p class="pri__heading special__heading">
+                            Specialities
+                        </p>
+                        <p class="special__desc pri__desc">
                             Lorem ipsum dolor sit amet, consectetur adipiscing
                             elit. In urna, non nisl tincidunt ut elementum
                             turpis.
                         </p>
                     </div>
 
-                    <div class="client-list">
-                        <div class="client-item">
+                    <div class="special-list">
+                        <div class="special-item">
                             <img
                                 src="./assets/icon/special-decor-01.svg"
                                 alt=""
-                                class="client-decor"
+                                class="special-decor"
                             />
-                            <h4 class="third__heading client-item__heading">
+                            <h4 class="third__heading special-item__heading">
                                 Product design
                             </h4>
-                            <p class="pri__desc client-item__desc">
+                            <p class="pri__desc special-item__desc">
                                 Lorem ipsum dolor sit amet, solor adipiscing
                                 elit. Non nisl solor ut elementum turpis.
                             </p>
                         </div>
-                        <div class="client-item">
+                        <div class="special-item hide-on-mb">
                             <img
                                 src="./assets/icon/special-decor-02.svg"
                                 alt=""
-                                class="client-decor"
+                                class="special-decor"
                             />
-                            <h4 class="third__heading client-item__heading">
+                            <h4 class="third__heading special-item__heading">
                                 UI/UX Design
                             </h4>
-                            <p class="pri__desc client-item__desc">
+                            <p class="pri__desc special-item__desc">
                                 Lorem ipsum dolor sit amet, solor adipiscing
                                 elit. Non nisl solor ut elementum turpis.
                             </p>
                         </div>
-                        <div class="client-item">
+                        <div class="special-item hide-on-mb">
                             <img
                                 src="./assets/icon/special-decor-03.svg"
                                 alt=""
-                                class="client-decor"
+                                class="special-decor"
                             />
-                            <h4 class="third__heading client-item__heading">
+                            <h4 class="third__heading special-item__heading">
                                 Interactive design
                             </h4>
-                            <p class="pri__desc client-item__desc">
+                            <p class="pri__desc special-item__desc">
                                 Lorem ipsum dolor sit amet, solor adipiscing
                                 elit. Non nisl solor ut elementum turpis.
                             </p>
                         </div>
                     </div>
+                    <div class="dots show-on-mb dots--mobile">
+                        <div class="dot"></div>
+                        <div class="dot dot--active"></div>
+                        <div class="dot"></div>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
 
         <!-- Project -->
         <section class="project">
-            <div class="container">
-                <!-- Project content -->
+            <div class="container--main">
                 <div class="project-content">
-                    <div class="row project-content__wrap">
-                        <div class="col-5">
-                            <h2 class="pri__heading project__heading">
-                                Take a look at my recent projects
-                            </h2>
-                        </div>
-                        <div class="col-4 offset-1">
-                            <p class="pri__desc project__desc">
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit. In urna, non nisl tincidunt ut
-                                elementum turpis.
+                    <h2 class="pri__heading project__heading">
+                        Take a look at my recent projects
+                    </h2>
+                    <p class="pri__desc project__desc">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        In urna, non nisl tincidunt ut elementum turpis.
+                    </p>
+                </div>
+
+                <div class="project-list">
+                    <div class="project-item">
+                        <img
+                            src="./assets/images/project-decor.svg"
+                            alt=""
+                            class="project-item__decor"
+                        />
+                        <div class="project-item__content">
+                            <h3 class="projec-item__heading third__heading">
+                                Wally Website
+                            </h3>
+                            <p class="second__desc project-item__desc">
+                                Lorem ipsum dolor amet, consectetur adipiscing
+                                st elit.
                             </p>
+                            <a href="#!" class="project-item__link"
+                                >Case Study</a
+                            >
                         </div>
+                        <img
+                            src="./assets/images/project-01.png"
+                            alt=""
+                            class="project-item__img"
+                        />
                     </div>
 
-                    <!-- Projectlist -->
-                    <div class="project-list">
-                        <div class="row project-list__wrap">
-                            <div class="col-6">
-                                <div class="project-item">
-                                    <img
-                                        src="./assets/images/project-decor.svg"
-                                        alt=""
-                                        class="project-item__decor"
-                                    />
-                                    <div class="project-item__content">
-                                        <h3
-                                            class="projec-item__heading third__heading"
-                                        >
-                                            Wally Website
-                                        </h3>
-                                        <p
-                                            class="second__desc project-item__desc"
-                                        >
-                                            Lorem ipsum dolor amet, consectetur
-                                            adipiscing st elit.
-                                        </p>
-                                        <a href="#!" class="project-item__link"
-                                            >Case Study</a
-                                        >
-                                    </div>
-                                    <img
-                                        src="./assets/images/project-01.png"
-                                        alt=""
-                                        class="project-item__img"
-                                    />
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="project-item">
-                                    <img
-                                        src="./assets/images/project-decor.svg"
-                                        alt=""
-                                        class="project-item__decor"
-                                    />
-                                    <div class="project-item__content">
-                                        <h3
-                                            class="projec-item__heading third__heading"
-                                        >
-                                            Banking App
-                                        </h3>
-                                        <p
-                                            class="second__desc project-item__desc"
-                                        >
-                                            Lorem ipsum dolor amet, consectetur
-                                            adipiscing st elit.
-                                        </p>
-                                        <a href="#!" class="project-item__link"
-                                            >Case Study</a
-                                        >
-                                    </div>
-                                    <img
-                                        src="./assets/images/project-02.png"
-                                        alt=""
-                                        class="project-item__img"
-                                    />
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="project-item">
-                                    <img
-                                        src="./assets/images/project-decor.svg"
-                                        alt=""
-                                        class="project-item__decor"
-                                    />
-                                    <div class="project-item__content">
-                                        <h3
-                                            class="projec-item__heading third__heading"
-                                        >
-                                            Web App
-                                        </h3>
-                                        <p
-                                            class="second__desc project-item__desc"
-                                        >
-                                            Lorem ipsum dolor amet, consectetur
-                                            adipiscing st elit.
-                                        </p>
-                                        <a href="#!" class="project-item__link"
-                                            >Case Study</a
-                                        >
-                                    </div>
-                                    <img
-                                        src="./assets/images/project-03.png"
-                                        alt=""
-                                        class="project-item__img"
-                                    />
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="project-item">
-                                    <img
-                                        src="./assets/images/project-decor.svg"
-                                        alt=""
-                                        class="project-item__decor"
-                                    />
-                                    <div class="project-item__content">
-                                        <h3
-                                            class="projec-item__heading third__heading"
-                                        >
-                                            Web App
-                                        </h3>
-                                        <p
-                                            class="second__desc project-item__desc"
-                                        >
-                                            Lorem ipsum dolor amet, consectetur
-                                            adipiscing st elit.
-                                        </p>
-                                        <a href="#!" class="project-item__link"
-                                            >Oculus Website</a
-                                        >
-                                    </div>
-                                    <img
-                                        src="./assets/images/project-04.png"
-                                        alt=""
-                                        class="project-item__img"
-                                    />
-                                </div>
-                            </div>
+                    <div class="project-item">
+                        <img
+                            src="./assets/images/project-decor.svg"
+                            alt=""
+                            class="project-item__decor"
+                        />
+                        <div class="project-item__content">
+                            <h3 class="projec-item__heading third__heading">
+                                Banking App
+                            </h3>
+                            <p class="second__desc project-item__desc">
+                                Lorem ipsum dolor amet, consectetur adipiscing
+                                st elit.
+                            </p>
+                            <a href="#!" class="project-item__link"
+                                >Case Study</a
+                            >
                         </div>
+                        <img
+                            src="./assets/images/project-02.png"
+                            alt=""
+                            class="project-item__img"
+                        />
                     </div>
-                    <div class="project-cta">
-                        <a href="" class="btn project-cta__btn">
-                            All Projects
-                        </a>
+
+                    <div class="project-item">
+                        <img
+                            src="./assets/images/project-decor.svg"
+                            alt=""
+                            class="project-item__decor"
+                        />
+                        <div class="project-item__content">
+                            <h3 class="projec-item__heading third__heading">
+                                Web App
+                            </h3>
+                            <p class="second__desc project-item__desc">
+                                Lorem ipsum dolor amet, consectetur adipiscing
+                                st elit.
+                            </p>
+                            <a href="#!" class="project-item__link"
+                                >Case Study</a
+                            >
+                        </div>
+                        <img
+                            src="./assets/images/project-03.png"
+                            alt=""
+                            class="project-item__img"
+                        />
                     </div>
+
+                    <div class="project-item">
+                        <img
+                            src="./assets/images/project-decor.svg"
+                            alt=""
+                            class="project-item__decor"
+                        />
+                        <div class="project-item__content">
+                            <h3 class="projec-item__heading third__heading">
+                                Oculus Website
+                            </h3>
+                            <p class="second__desc project-item__desc">
+                                Lorem ipsum dolor amet, consectetur adipiscing
+                                st elit.
+                            </p>
+                            <a href="#!" class="project-item__link"
+                                >Case Study</a
+                            >
+                        </div>
+                        <img
+                            src="./assets/images/project-04.png"
+                            alt=""
+                            class="project-item__img"
+                        />
+                    </div>
+                </div>
+                <div class="project-cta">
+                    <a href="" class="btn project-cta__btn"> All Projects </a>
                 </div>
             </div>
         </section>
 
         <!-- statistic -->
         <section class="stat">
-            <div class="container--sm">
+            <div class="container--main">
                 <div class="stat-intro">
                     <p class="third__heading stat-intro__title">
                         Hey,,,,It’s Arif
@@ -547,26 +575,28 @@
                 </div>
                 <div class="stat-value">
                     <div class="stat-value__item">
-                        <p class="pri__heading stat-value__number">08+</p>
-                        <p class="pri__desc stat-value__title">
-                            Years Experience
-                        </p>
-                    </div>
-                    <div class="stat-value__item">
                         <span class="pri__heading stat-value__number">21+</span>
                         <p class="pri__desc stat-value__title">
                             Features & Awards
                         </p>
                     </div>
+
                     <div class="stat-value__item">
-                        <p class="pri__heading stat-value__number">97%</p>
+                        <span class="pri__heading stat-value__number">08+</span>
+                        <p class="pri__desc stat-value__title">
+                            Years Experience
+                        </p>
+                    </div>
+
+                    <div class="stat-value__item">
+                        <span class="pri__heading stat-value__number">97%</span>
                         <p class="pri__desc stat-value__title">
                             Clients Rating
                         </p>
                     </div>
                 </div>
             </div>
-            <div class="container">
+            <div class="container--main">
                 <div class="stat-video">
                     <img
                         src="./assets/images/video-thumb.png"
@@ -615,12 +645,12 @@
                     User Interface Design at PCL Lab
                 </p>
             </div>
-            <div class="feedback-dots">
-                <div class="feedback-dot"></div>
-                <div class="feedback-dot"></div>
-                <div class="feedback-dot feedback-dot--active"></div>
-                <div class="feedback-dot"></div>
-                <div class="feedback-dot"></div>
+            <div class="dots">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot dot--active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
             </div>
             <img
                 src="./assets/images/feedback-decor-01.svg"
@@ -636,7 +666,7 @@
 
         <!-- Questions -->
         <section class="question">
-            <div class="container">
+            <div class="container--main">
                 <h2 class="pri__heading question__heading">
                     A few questions clients normally ask me
                 </h2>
@@ -702,13 +732,21 @@
                             <i class="fa-solid fa-plus"></i>
                         </div>
                     </div>
+
+                    <div class="dots show-on-mb">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot dot--active"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Space working -->
         <section class="spacework">
-            <div class="container">
+            <div class="container--main">
                 <div class="spacework-content">
                     <h2 class="spacework__heading pri__heading">
                         My atmosphere
@@ -723,74 +761,181 @@
                 </div>
 
                 <div class="spacework-list">
-                    <div class="row">
-                        <div class="col-4">
-                            <div class="spacework-item">
-                                <img
-                                    src="./assets/images/spacework-01.jpg"
-                                    alt=""
-                                    class="spacework__img"
-                                />
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="spacework-item">
-                                <img
-                                    src="./assets/images/spacework-02.jpg"
-                                    alt=""
-                                    class="spacework__img"
-                                />
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="spacework-item">
-                                <img
-                                    src="./assets/images/spacework-03.jpg"
-                                    alt=""
-                                    class="spacework__img"
-                                />
-                            </div>
-                        </div>
+                    <div class="spacework-item">
+                        <img
+                            src="./assets/images/spacework-01.jpg"
+                            alt=""
+                            class="spacework__img"
+                        />
+                    </div>
+                    <div class="spacework-item hide-on-mb">
+                        <img
+                            src="./assets/images/spacework-02.jpg"
+                            alt=""
+                            class="spacework__img"
+                        />
+                    </div>
+                    <div class="spacework-item hide-on-mb">
+                        <img
+                            src="./assets/images/spacework-03.jpg"
+                            alt=""
+                            class="spacework__img"
+                        />
+                    </div>
+                    <div class="dots show-on-mb">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot dot--active"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Booking -->
-        <div class="container--lg">
-            <section class="booking">
-                <div class="booking-content">
-                    <img
-                        src="./assets/icon/emoji-01.svg"
-                        alt=""
-                        class="booking-emoji"
-                    />
-                    <h2 class="pri__heading booking__heading">
-                        Got a project? Let’s talk
-                    </h2>
-                    <p class="pri__desc booking__desc">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        In urna, non nisl tincidunt ut elementum turpis.
-                    </p>
-                    <a href="#!" class="btn booking__btn">Book a Call</a>
-                </div>
+        <section class="booking">
+            <div class="container--main">
+                <div class="booking-wrap">
+                    <div class="booking-content">
+                        <img
+                            src="./assets/icon/emoji-01.svg"
+                            alt=""
+                            class="booking-emoji"
+                        />
+                        <h2 class="pri__heading booking__heading">
+                            Got a project? Let’s talk
+                        </h2>
+                        <p class="pri__desc booking__desc">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit. In urna, non nisl tincidunt ut elementum
+                            turpis.
+                        </p>
+                        <a href="#!" class="btn booking__btn">Book a Call</a>
+                    </div>
 
-                <img
-                    src="./assets/images/booking-decor-01.svg"
-                    alt=""
-                    class="booking-decor--left"
-                />
-                <img
-                    src="./assets/images/booking-decor-02.svg"
-                    alt=""
-                    class="booking-decor--center"
-                />
-                <img
-                    src="./assets/images/booking-decor-03.svg"
-                    alt=""
-                    class="booking-decor--right"
-                />
-            </section>
-        </div>
+                    <img
+                        src="./assets/images/booking-decor-01.svg"
+                        alt=""
+                        class="booking-decor--left"
+                    />
+                    <img
+                        src="./assets/images/booking-decor-02.svg"
+                        alt=""
+                        class="booking-decor--center"
+                    />
+                    <img
+                        src="./assets/images/booking-decor-03.svg"
+                        alt=""
+                        class="booking-decor--right"
+                    />
+                </div>
+            </div>
+        </section>
+
+        <!-- Header bottom -->
+        <header class="header header--bottom hide-on-mb">
+            <div class="container--lg container--lg__bottom">
+                <div class="header-inner">
+                    <div class="header-mail">
+                        <div class="header-mail__icon">
+                            <img
+                                src="./assets/icon/heart-mail.svg"
+                                alt=""
+                                class="header-mail__img"
+                            />
+                        </div>
+                        <a
+                            href="mailto:hi@arif.interactive"
+                            class="header-mail__link"
+                            >hi@arif.interactive</a
+                        >
+                    </div>
+                    <a href="#!" class="logo">
+                        <img
+                            src="./assets/images/logo.png"
+                            alt=""
+                            class="logo__img"
+                        />
+                    </a>
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a href="#!" class="nav-item__link">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#!" class="nav-item__link">Journey</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#!" class="nav-item__link">Service</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#!" class="nav-item__link">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <header class="header header--bottom show-on-mb">
+            <div class="container--lg container--lg__bottom">
+                <div class="header-inner">
+                    <div class="header-mail">
+                        <div class="header-mail__icon">
+                            <img
+                                src="./assets/icon/heart-mail.svg"
+                                alt=""
+                                class="header-mail__img"
+                            />
+                        </div>
+                        <a
+                            href="mailto:hi@arif.interactive"
+                            class="header-mail__link"
+                            >hi@arif.interactive</a
+                        >
+                    </div>
+
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a href="#!" class="nav-item__link">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#!" class="nav-item__link">Journey</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#!" class="nav-item__link">Service</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#!" class="nav-item__link">Contact</a>
+                        </li>
+                    </ul>
+
+                    <a href="#!" class="logo">
+                        <img
+                            src="./assets/images/logo.png"
+                            alt=""
+                            class="logo__img"
+                        />
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <footer class="footer">
+            <div class="container--main">
+                <div class="footer-inner">
+                    <p class="footer__coppyright pri__desc">
+                        ©interactiveArif 2021. All rights reserved.
+                    </p>
+                    <div class="footer-right">
+                        <a href="#!" class="footer__policy pri__desc"
+                            >Privacy Policy</a
+                        >
+                        <a href="#!" class="footer__term pri__desc">
+                            Terms of Conditions
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>
